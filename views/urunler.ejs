@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urunler</title>
+</head>
+<body>
+    <h1>urunler</h1>
+    <p>
+        <%= urunler[0].isim %>
+        <%= urunler[0].fiyat %>
+    </p>
+    <ul>
+        <% urunler.forEach(Urun => { %>
+
+            <% if (Urun.isActive) { %>
+                <li>
+                    <a href="/urunler/<%= Urun.id %>">
+                        <%= Urun.isim %> - <%= Urun.fiyat %>
+                    </a>
+                </li>
+            <% } %>
+
+        <% }) %>
+    </ul>
+</body>
+</html>

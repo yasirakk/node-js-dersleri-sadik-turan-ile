@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urun detay</title>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-warning">
+    <h1><%= isim %></h1>
+    <img src="/images/<%= imageUrl %>" alt="" width="100">
+    <p>Fiyat: <%= fiyat %></p>
+    <p>
+        <% if (isActive) { %>
+         <span>urun satista</span>
+        <% } else { %>
+            <span>urun satista deil</span>
+        <% } %>
+    </p>
+</body>
+</html>
