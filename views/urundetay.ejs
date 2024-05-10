@@ -6,16 +6,42 @@
     <title>Urun detay</title>
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
 </head>
-<body class="bg-warning">
-    <h1><%= isim %></h1>
-    <img src="/images/<%= imageUrl %>" alt="" width="100">
-    <p>Fiyat: <%= fiyat %></p>
-    <p>
-        <% if (isActive) { %>
-         <span>urun satista</span>
-        <% } else { %>
-            <span>urun satista deil</span>
-        <% } %>
-    </p>
+<body>
+    <%- include('partials/naw') %>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                 
+                    <div class="card mb-3">
+                        <div class="row">
+                            
+                            <div class="col-4">
+                                <img src="/images/<%= imageUrl %>" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= isim %></h5>
+                                    <p class="card-text"><%= fiyat %></p>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Doloremque asperiores impedit quos quibusdam earum aperiam 
+                                        recusandae maiores numquam saepe, adipisci tempore non veniam, 
+                                        voluptatibus, magnam unde exercitationem architecto pariatur repellat!
+                                    </p>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Doloremque asperiores impedit quos quibusdam earum aperiam 
+                                        recusandae maiores numquam saepe, adipisci tempore non veniam, 
+                                        voluptatibus, magnam unde exercitationem architecto pariatur repellat!
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
 </body>
 </html>

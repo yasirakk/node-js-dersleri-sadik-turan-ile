@@ -4,25 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urunler</title>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>urunler</h1>
-    <p>
-        <%= urunler[0].isim %>
-        <%= urunler[0].fiyat %>
-    </p>
-    <ul>
-        <% urunler.forEach(Urun => { %>
+    <%- include('partials/naw') %>
+    <div class="container mt-3">
+        <h1>Urunler</h1>
+        <div class="row">
+            <div class="col-12">
+                <% urunler.forEach(element => { %>
+                 
+                    <%- include('partials/urun', element) %>
 
-            <% if (Urun.isActive) { %>
-                <li>
-                    <a href="/urunler/<%= Urun.id %>">
-                        <%= Urun.isim %> - <%= Urun.fiyat %>
-                    </a>
-                </li>
-            <% } %>
-
-        <% }) %>
-    </ul>
+                <% }) %>
+                    
+            </div>
+        </div>
+    </div>
 </body>
 </html>

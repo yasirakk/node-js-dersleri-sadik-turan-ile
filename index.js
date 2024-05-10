@@ -12,6 +12,7 @@ const urunTablosu = [
         fiyat: 1000,
         isActive: true,
         imageUrl: 'telefon-foto.jpg',
+        isHome: true,
     },
     {
         id: 2,
@@ -19,6 +20,7 @@ const urunTablosu = [
         fiyat: 2000,
         isActive: true,
         imageUrl: 'kamera-foto.jpg',
+        isHome: false,
 
     },
     {
@@ -27,11 +29,12 @@ const urunTablosu = [
         fiyat: 3000,
         isActive: true,
         imageUrl: 'klavye-foto.jpg',
+        isHome: true,
     }
 ];
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', { urunler: urunTablosu });
 });
 
 app.get('/urunler/:id', (req, res) => {
@@ -50,3 +53,6 @@ app.use((req, res) => {
 app.listen(3000, () => {
     console.log('Server running on port 3000');
 });
+
+
+// sayfamızın linki: http://127.0.0.1:3000/
