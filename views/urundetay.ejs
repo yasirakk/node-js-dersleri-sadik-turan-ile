@@ -6,6 +6,11 @@
     <title>Urun detay</title>
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
 </head>
+<style>
+    .no-pointer {
+    cursor: default !important;
+}
+</style>
 <body>
     <%- include('partials/naw') %>
     <div class="container mt-3">
@@ -16,12 +21,12 @@
                         <div class="row">
                             
                             <div class="col-4">
-                                <img src="/images/<%= imageUrl %>" alt="" class="img-fluid">
+                                <img src="/images/<%= urun.imageUrl %>" alt="" class="img-fluid">
                             </div>
                             <div class="col-8">
                                 <div class="card-body">
-                                    <h5 class="card-title"><%= isim %></h5>
-                                    <p class="card-text"><%= fiyat %></p>
+                                    <h5 class="card-title"><%= urun.isim %></h5>
+                                    <p class="card-text"><%= urun.fiyat %></p>
                                     <p>
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                                         Doloremque asperiores impedit quos quibusdam earum aperiam 
