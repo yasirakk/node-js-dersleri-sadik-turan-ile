@@ -14,3 +14,4 @@ app.listen(3000, () => {
 
 
 // sayfamızın linki: http://127.0.0.1:3000/
+// derslerin devamını izlemek için https://www.udemy.com/course/komple-web-gelistirme-kursu-nodejs/?referralCode=11FD99AE510C32F9F77F&couponCode=LEADERSALE24B
